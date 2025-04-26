@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 import json
 import threading
+import os
 from detector import ForgottenObjectDetector
 
 app = Flask(__name__)
@@ -33,4 +34,5 @@ def index():
     return render_template('index.html')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 8080))
+    app.run(host='0.0.0.0', port=port)
