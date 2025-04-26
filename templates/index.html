@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Система Відеоспостереження</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body { font-family: Arial; padding: 20px; max-width: 600px; margin: auto; }
+        input, label { display: block; width: 100%; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Налаштування спостереження</h1>
+    <form method="post">
+        <label>Мінімальна площа об'єкта:</label>
+        <input type="number" name="min_area" value="500">
+
+        <label>Час до фіксації забуття (сек):</label>
+        <input type="number" name="forgotten_time" value="10">
+
+        <label>Відео джерело (0 або шлях):</label>
+        <input type="text" name="video_source" value="0">
+
+        <label>Об'єкти для спостереження (через кому):</label>
+        <input type="text" name="target_objects" value="backpack, handbag, suitcase">
+
+        <label>Email для повідомлень (необов’язково):</label>
+        <input type="email" name="email_notify" placeholder="you@example.com">
+
+        <label>Telegram Bot Token:</label>
+        <input type="text" name="telegram_token">
+
+        <label>Telegram Chat ID:</label>
+        <input type="text" name="telegram_chat_id">
+
+        <input type="submit" value="Запустити">
+    </form>
+</body>
+</html>
